@@ -1,0 +1,28 @@
+def bin_search(list1,val):
+  if not len(list1):
+    return "empty list"
+  low=0
+  max=len(list1)-1
+  while low<=max:
+    mid=(low+max)//2
+    position=find_position(list1,mid,val)
+    if position=="middle":
+      return mid
+    elif position=="left":
+      max=mid-1
+    else:
+      low=mid+1
+  return "not found"
+def find_position(list1,mid,val):
+  if list1[mid]==val:
+    if list1[mid-1]==val:
+      return 'left'
+    return 'middle'
+  elif list1[mid]<val:
+    return 'right'
+  else:
+    return 'left'
+a=[]
+b=[3,4,5,6,8]
+bin_search(a,1)
+bin_search(b,5)
