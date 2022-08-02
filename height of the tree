@@ -1,0 +1,7 @@
+def height(node):
+  if node is None:
+    return 0
+  return (1+max(height(node.left),height(node.right)))
+  
+# at first you need to declare tree 
+# for code goto create_tree in my datastructures repository
