@@ -1,0 +1,44 @@
+class User():
+  def __init__(self,user,username,email):
+    self.user=user
+    self.username=username
+    self.email=email
+  def __repr__(self):
+    return "User(user='{}', username='{}', email='{}')".format(self.user,self.username,self.email)
+  def __str__(self):
+    return __repr__(self)
+anil=User('anil',"anil kumar reddy",'anil@3418')
+anil
+----------------------------------------------------------------------------------
+class Database():
+  def __init__(self):
+    self.users=[]
+  def insert(self,user):
+    #inserting the new user at alphabetical order
+    if user in self.users:
+      return "user already exists"
+    else:
+      if not len(self.users):
+        return self.users.append(user)
+      else:
+        for i in len(self.users):
+          if self.users[i].username<user.username:
+            continue
+          self.users.insert(i,user)
+    pass
+  def update(self,user):
+    #check if user exists or not then update the details
+    if user in self.users:
+      target=self.users.find(user.username)
+      self.users[target]=user
+      return True
+  def find(self,username):
+    #check whether user exists or not if so, show the details
+    for user in self.users:
+      if user.username==username:
+        return user
+    pass
+  def list_all(self):
+    #show the all user details such as username
+    for i in self.users:
+      print(i.__repr__)
