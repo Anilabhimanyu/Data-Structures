@@ -1,0 +1,15 @@
+def parse_tuple(data):
+  if isinstance(data,tuple) and len(data)==3:
+    node=tree_node(data[1])
+    node.left=parse_tuple(data[0])
+    node.right=parse_tuple(data[2])
+  elif data==None:
+    node=None
+  else:
+    node=tree_node(data)
+  return node
+--------------------------------------------------------------------------------------
+tuple1=((7,3,None),2,(3,4,5))
+tree1=parse_tuple(tuple1)
+tree1.right.key
+# answer is 4
