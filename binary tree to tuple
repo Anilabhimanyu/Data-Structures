@@ -1,0 +1,13 @@
+def totuple(node):
+  if node is None:
+    return None
+  elif node.left is None and node.right is None:
+    return node.key
+  return totuple(node.left),node.key,totuple(node.right)
+#---------------------------------------------------------------------------------------------
+'''
+if we pass binary tree then it'll make the tuple of triple set
+ex:
+totuple(tree1)    # here tree is made using create_tree for reference goto create_tree in my datastructure repository
+#returns
+((7, 3, None), 2, (3, 4, 5))
