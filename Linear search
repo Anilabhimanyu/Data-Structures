@@ -1,0 +1,11 @@
+#list
+list1=[3,4,5,6,8,9]
+def search(list1,value):
+  #if not(len(list)):
+   # return -1
+  for i in range(len(list1)):
+    if value==list1[i]:
+      return i
+  return -1
+search(list1,8)
+    
