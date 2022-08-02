@@ -1,0 +1,15 @@
+def weight(node):
+  if node is None:
+    return 0
+  return (node.key+weight(node.left)+weight(node.right))
+------------------------------------------------------------------------------------------------------
+  
+# if you observe carefully this code is entirely similar to finding how many nodes in binary tree 
+# in that at every node we add one but in this we add the node.key i.e, node value
+# for reference
+# this code counts how many nodes in binary tree
+
+def weight(node):
+  if node is None:
+    return 0
+  return (1+weight(node.left)+weight(node.right))
