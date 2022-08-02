@@ -1,0 +1,19 @@
+def weight(node):
+  if node is None:
+    return 0
+  return (1+weight(node.left)+weight(node.right))
+--------------------------------------------------------------------------------------------------------------------
+  
+#you need to initially define tree using tree_node class
+class tree_node():
+  def __init__(self,val):
+    self.key=val
+    self.left=None
+    self.right=None
+
+node0=tree_node(5)
+node1=tree_node(6)
+node2=tree_node(8)
+node3=tree_node(7)
+node4=tree_node(78)
+node4'''
