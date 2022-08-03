@@ -1,0 +1,11 @@
+def insertion_sort(nums):
+  for i in range(len(nums)):
+    #removing each value and comparing with previous values
+    var=nums.pop(i)
+    j=i-1
+    while j>=0 and nums[j]>=var:
+      j-=1
+    #again inserting the var in the correct position i.e, sorted position
+    nums.insert(j+1,var)
+  return nums
+insertion_sort([3,2,9,1,5])
